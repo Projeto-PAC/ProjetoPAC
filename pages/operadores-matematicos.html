@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operadores Matemáticos</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>PAC</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <a href="../index.html" class="back-btn">← Voltar</a>
+
+      <article class="content-page">
+        <h2>Operadores Matemáticos</h2>
+
+        <h3>O que são Operadores Matemáticos?</h3>
+
+        <p>
+          Com variáveis, podemos fazer cálculos usando operadores matemáticos.
+          Esses operadores permitem realizar operações como soma, subtração,
+          multiplicação e divisão em nossos programas.
+        </p>
+
+        <h3>Operadores Básicos</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>+</strong></td>
+              <td>Soma</td>
+              <td>Adiciona dois números</td>
+              <td>5 + 3 = 8</td>
+            </tr>
+            <tr>
+              <td><strong>-</strong></td>
+              <td>Subtração</td>
+              <td>Subtrai o segundo número do primeiro</td>
+              <td>5 - 3 = 2</td>
+            </tr>
+            <tr>
+              <td><strong>*</strong></td>
+              <td>Multiplicação</td>
+              <td>Multiplica dois números</td>
+              <td>5 * 3 = 15</td>
+            </tr>
+            <tr>
+              <td><strong>/</strong></td>
+              <td>Divisão</td>
+              <td>Divide o primeiro número pelo segundo</td>
+              <td>15 / 3 = 5</td>
+            </tr>
+            <tr>
+              <td><strong>%</strong></td>
+              <td>Resto (Módulo)</td>
+              <td>
+                Retorna o resto da divisão (útil para descobrir se um número é
+                par ou ímpar)
+              </td>
+              <td>17 % 5 = 2</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Exemplo Comentado: Calcular Média</h3>
+
+        <p>
+          Vamos criar um programa que calcula a média de duas notas. Este é um
+          exemplo clássico que usa vários operadores matemáticos.
+        </p>
+
+        <div class="activity-box">
+          <h4>💻 Código - Calcular Média de Notas</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float nota1 = 8.5;
+    float nota2 = 7.0;
+
+    /* Calcular a média: soma as notas e divide por 2 */
+    float media = (nota1 + nota2) / 2;
+
+    printf("Nota 1: %.1f\n", nota1);
+    printf("Nota 2: %.1f\n", nota2);
+    printf("A média é: %.2f\n", media);
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h4>Explicação do Código</h4>
+        <ul>
+          <li>
+            <code>float nota1 = 8.5;</code> — Armazena a primeira nota como
+            número decimal
+          </li>
+          <li>
+            <code>float nota2 = 7.0;</code> — Armazena a segunda nota como
+            número decimal
+          </li>
+          <li>
+            <code>float media = (nota1 + nota2) / 2;</code> — Soma as notas e
+            divide por 2 para obter a média
+          </li>
+          <li>
+            <code>%.1f</code> — Mostra um número decimal com 1 casa decimal
+          </li>
+          <li>
+            <code>%.2f</code> — Mostra um número decimal com 2 casas decimais
+          </li>
+        </ul>
+
+        <h4>Cálculo no Quadro</h4>
+        <p
+          style="
+            font-family: monospace;
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+          "
+        >
+          (8.5 + 7.0) / 2 = 15.5 / 2 = 7.75
+        </p>
+
+        <h4>Pergunta para Reflexão</h4>
+        <p>
+          <strong
+            >❓ Se a primeira nota fosse 10 e a segunda 5, qual seria a
+            média?</strong
+          >
+        </p>
+        <p
+          style="
+            margin-left: 2rem;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: 4px;
+          "
+        >
+          Cálculo: (10 + 5) / 2 = 15 / 2 = 7.5
+        </p>
+
+        <div class="section-separator"></div>
+
+        <h3>Mini-Desafios Práticos</h3>
+
+        <p>
+          Aqui estão alguns desafios para você praticar e entender melhor como
+          os operadores funcionam. Tente resolver cada um!
+        </p>
+
+        <div class="activity-box">
+          <h4>Desafio 1: Somar Dois Números Inteiros</h4>
+          <p>
+            Escreva um programa que leia dois números inteiros digitados pelo
+            usuário e exiba a soma deles.
+          </p>
+          <p>
+            <strong>Dica:</strong> Use <code>scanf("%d", &numero)</code> para
+            ler números inteiros.
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Desafio 2: Descobrir se um Número é Par ou Ímpar</h4>
+          <p>
+            Escreva um programa que leia um número inteiro e determine se ele é
+            par ou ímpar usando o operador de resto (%).
+          </p>
+          <p>
+            <strong>Dica:</strong> Se o resto da divisão por 2 é zero, o número
+            é par. Senão, é ímpar.
+          </p>
+
+          <h5>Explicação</h5>
+          <p>
+            O operador <code>%</code> retorna o resto da divisão.
+            <code>numero % 2 == 0</code> verifica se o resto é zero (número
+            par).
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Desafio 3: Converter Metros para Centímetros</h4>
+          <p>
+            Escreva um programa que leia uma medida em metros e a converta para
+            centímetros. Lembre-se: 1 metro = 100 centímetros.
+          </p>
+          <p><strong>Dica:</strong> Multiplique o valor em metros por 100.</p>
+
+          <h5>Exemplos</h5>
+          <ul>
+            <li>1.5 metros = 150 centímetros</li>
+            <li>2.0 metros = 200 centímetros</li>
+            <li>0.75 metros = 75 centímetros</li>
+          </ul>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Resumo dos Conceitos</h3>
+
+        <div class="activity-box">
+          <h4>Checklist de Aprendizado</h4>
+          <ul>
+            <li>✓ Conheço os operadores matemáticos básicos: +, -, *, /, %</li>
+            <li>✓ Compreendo quando usar cada operador</li>
+            <li>✓ Sei que % retorna o resto da divisão</li>
+            <li>✓ Consigo calcular a média de dois números</li>
+            <li>✓ Consigo usar % para verificar se um número é par ou ímpar</li>
+            <li>✓ Sei como converter unidades usando multiplicação</li>
+          </ul>
+        </div>
+
+        <div class="activity-box">
+          <h4>📋 Próximas Aulas</h4>
+          <p><strong>Datas:</strong> 21 e 28 de novembro, a partir das 18h45</p>
+          <p>
+            <strong>Tópicos:</strong> Estruturas de controle (if/else), loops
+            (for, while) e funções. Com essas estruturas, você poderá tomar
+            decisões no seu código!
+          </p>
+        </div>
+
+        <div
+          class="activity-box"
+          style="background-color: #e8f5e9; border-color: #4caf50"
+        >
+          <h4>💡 Dica Final</h4>
+          <p>
+            Brinque em casa com os códigos! Altere os valores, teste diferentes
+            cálculos e experimente combinar operadores. A prática é essencial
+            para dominar programação.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Católica SC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

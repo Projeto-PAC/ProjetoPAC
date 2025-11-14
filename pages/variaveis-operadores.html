@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis, Tipos e Operadores</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>PAC</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <a href="../index.html" class="back-btn">← Voltar</a>
+
+      <article class="content-page">
+        <h2>Variáveis, Tipos e Operadores em C</h2>
+
+        <h3>O que são Variáveis?</h3>
+
+        <p>
+          As variáveis são como caixas com etiquetas onde armazenamos
+          informações dentro de um programa. Cada caixa guarda um tipo
+          específico de coisa: um número, uma letra, um preço, etc.
+        </p>
+
+        <h4>Analogia do Cotidiano</h4>
+
+        <p>Pense em variáveis como objetos que você usa diariamente:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Exemplo</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>int</strong></td>
+              <td>Número de sapatos no guarda-roupa</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td><strong>float</strong></td>
+              <td>Sua altura</td>
+              <td>1.65</td>
+            </tr>
+            <tr>
+              <td><strong>char</strong></td>
+              <td>Inicial do seu nome</td>
+              <td>'B'</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Tipos de Dados Fundamentais em C</h3>
+
+        <h4>1. int (Inteiro)</h4>
+        <p>
+          Armazena números inteiros (sem casas decimais). Exemplos: idade,
+          quantidade de pessoas, número de sapatos.
+        </p>
+
+        <h4>2. float (Ponto Flutuante)</h4>
+        <p>
+          Armazena números com casas decimais. Exemplos: altura, peso, preço de
+          um produto.
+        </p>
+
+        <h4>3. char (Caractere)</h4>
+        <p>
+          Armazena um único caractere. Exemplos: inicial de um nome, letra de
+          uma escolha.
+        </p>
+
+        <div class="section-separator"></div>
+
+        <h3>Exemplo Comentado: Programa Básico com Variáveis</h3>
+
+        <div class="activity-box">
+          <h4>💻 Código com Variáveis e Tipos de Dados</h4>
+          <pre
+            class="code-block"
+          ><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    /* Declarar e inicializar variáveis */
+    int idade = 16;            /* Variável inteira para guardar idade */
+    float altura = 1.65f;     /* Variável decimal para altura */
+    char inicial = 'B';       /* Variável para um caractere */
+
+    /* Mostrar informações na tela */
+    printf("Idade: %d\n", idade);        /* %d substitui pelo inteiro */
+    printf("Altura: %.2f\n", altura);    /* %.2f mostra 2 casas decimais */
+    printf("Inicial: %c\n", inicial);   /* %c mostra o caractere */
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h4>Explicação do Código</h4>
+        <ul>
+          <li>
+            <code>int idade = 16;</code> - Cria uma variável inteira chamada
+            "idade" com valor 16
+          </li>
+          <li>
+            <code>float altura = 1.65;</code> - Cria uma variável decimal
+            chamada "altura"
+          </li>
+          <li>
+            <code>char inicial = 'B';</code> - Cria uma variável de caractere
+            com a letra 'B'
+          </li>
+          <li><code>%d</code> - Placeholder para números inteiros</li>
+          <li>
+            <code>%.2f</code> - Placeholder para números decimais com 2 casas
+          </li>
+          <li><code>%c</code> - Placeholder para caracteres</li>
+        </ul>
+
+        <div class="section-separator"></div>
+
+        <h3>Entrada de Dados com scanf()</h3>
+
+        <p>
+          Para que o usuário possa digitar dados, usamos a função
+          <code>scanf()</code>. Ela lê informações do teclado e armazena nas
+          variáveis.
+        </p>
+
+        <div class="activity-box">
+          <h4>💻 Código com Entrada de Dados</h4>
+          <pre
+            class="code-block"
+          ><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int idade;
+    float altura;
+    char inicial;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);            /* &idade indica onde guardar o valor */
+
+    printf("Digite sua altura: ");
+    scanf("%f", &altura);
+
+    printf("Digite a inicial do seu nome: ");
+    scanf(" %c", &inicial);         /* espaço antes do %c ajuda a ler corretamente */
+
+    printf("Você tem %d anos, mede %.2f metros e sua inicial é %c\n", idade, altura, inicial);
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h4>Pontos Importantes</h4>
+        <ul>
+          <li>
+            <code>&idade</code> - O "&" significa "endereço de". Indica onde o
+            valor será armazenado
+          </li>
+          <li><code>%d</code> - Lê um inteiro</li>
+          <li><code>%f</code> - Lê um número decimal</li>
+          <li>
+            <code>%c</code> - Lê um caractere (com espaço antes para pular
+            espaços em branco)
+          </li>
+        </ul>
+
+        <div class="section-separator"></div>
+
+        <h3>Operadores Aritméticos</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Nome</th>
+              <th>Exemplo</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>+</td>
+              <td>Adição</td>
+              <td>5 + 3</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Subtração</td>
+              <td>5 - 3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Multiplicação</td>
+              <td>5 * 3</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>Divisão</td>
+              <td>15 / 3</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Resto (Módulo)</td>
+              <td>17 % 5</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Operadores de Comparação</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>==</td>
+              <td>Igual a</td>
+              <td>idade == 18</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>Diferente de</td>
+              <td>idade != 18</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>Menor que</td>
+              <td>idade &lt; 18</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>Maior que</td>
+              <td>idade &gt; 18</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>Menor ou igual a</td>
+              <td>idade &lt;= 18</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>Maior ou igual a</td>
+              <td>idade &gt;= 18</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Operadores Lógicos</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&&</td>
+              <td>E lógico (ambas as condições devem ser verdadeiras)</td>
+              <td>idade >= 18 && tem_carteira == 1</td>
+            </tr>
+            <tr>
+              <td>||</td>
+              <td>OU lógico (uma das condições deve ser verdadeira)</td>
+              <td>tem_carro || tem_bicicleta</td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>NÃO lógico (inverte o resultado)</td>
+              <td>!(idade &lt; 18)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Exemplo Prático: Calculadora Simples</h3>
+
+        <div class="activity-box">
+          <h4>💻 Código - Operações com Variáveis</h4>
+          <pre
+            class="code-block"
+          ><code class="language-c">#include &lt;stdio.h&gt;
+int main() {
+    int num1, num2;
+    int soma, subtracao, multiplicacao;
+    float divisao;
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número: ");
+    scanf("%d", &num2);
+
+    /* Realizar operações */
+    soma = num1 + num2;
+    subtracao = num1 - num2;
+    multiplicacao = num1 * num2;
+    divisao = (float)num1 / num2; /* Cast para obter resultado decimal */
+
+    /* Exibir resultados */
+    printf("\n--- Resultados ---\n");
+    printf("Soma: %d\n", soma);
+    printf("Subtração: %d\n", subtracao);
+    printf("Multiplicação: %d\n", multiplicacao);
+    printf("Divisão: %.2f\n", divisao);
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Resumo dos Conceitos</h3>
+
+        <div class="activity-box">
+          <h4>Checklist de Aprendizado</h4>
+          <ul>
+            <li>
+              ✓ Entendi o conceito de variáveis como "caixas de armazenamento"
+            </li>
+            <li>✓ Conheço os tipos de dados: int, float, char</li>
+            <li>✓ Sei como declarar e inicializar variáveis</li>
+            <li>✓ Compreendo o uso de printf() para saída de dados</li>
+            <li>✓ Compreendo o uso de scanf() para entrada de dados</li>
+            <li>✓ Conheço os operadores aritméticos (+, -, *, /, %)</li>
+            <li>
+              ✓ Conheço os operadores de comparação (==, !=, &lt;, &gt;, &lt;=,
+              &gt;=)
+            </li>
+            <li>✓ Conheço os operadores lógicos (&&, ||, !)</li>
+          </ul>
+        </div>
+
+        <div class="activity-box">
+          <h4>📋 Próximas Aulas</h4>
+          <p><strong>Datas:</strong> 21 e 28 de novembro, a partir das 18h45</p>
+          <p>
+            <strong>Tópicos:</strong> Estruturas de controle (if/else), loops
+            (for, while) e funções
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Católica SC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

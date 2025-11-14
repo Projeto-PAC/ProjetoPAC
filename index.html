@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>PAC</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Bem-vindo ao PAC</h2>
+        <p>Explore os conceitos fundamentais da programação</p>
+      </section>
+
+      <section class="cards-container">
+        <div class="card" onclick="navigateTo('pages/historia.html')">
+          <div class="card-icon">📚</div>
+          <h3>História da Programação</h3>
+          <p>
+            Conheça a evolução das linguagens de programação ao longo do tempo
+          </p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div class="card" onclick="navigateTo('pages/logica.html')">
+          <div class="card-icon">🧠</div>
+          <h3>Lógica de Programação</h3>
+          <p>Aprenda os fundamentos da lógica e algoritmos</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div class="card" onclick="navigateTo('pages/introducao-c.html')">
+          <div class="card-icon">⚙️</div>
+          <h3>Introdução à Linguagem C</h3>
+          <p>Explore a estrutura básica e primeiros programas em C</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div
+          class="card"
+          onclick="navigateTo('pages/variaveis-operadores.html')"
+        >
+          <div class="card-icon">💻</div>
+          <h3>Variáveis, Tipos e Operadores</h3>
+          <p>Aprenda sobre tipos de dados e operadores em C</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div
+          class="card"
+          onclick="navigateTo('pages/operadores-matematicos.html')"
+        >
+          <div class="card-icon">🔢</div>
+          <h3>Operadores Matemáticos</h3>
+          <p>Domine cálculos e operações matemáticas em C</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div
+          class="card"
+          onclick="navigateTo('pages/estruturas-repeticao.html')"
+        >
+          <div class="card-icon">🔄</div>
+          <h3>Estruturas de Repetição</h3>
+          <p>Domine decisões (if/else) e loops (for, while, do-while)</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div
+          class="card"
+          onclick="navigateTo('pages/ferramentas-programacao.html')"
+        >
+          <div class="card-icon">🛠️</div>
+          <h3>Ferramentas para Decolar</h3>
+          <p>Conheça VS Code, Git, Terminal, Stack Overflow e mais</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+
+        <div class="card" onclick="navigateTo('pages/exercicios.html')">
+          <div class="card-icon">📝</div>
+          <h3>Exercícios</h3>
+          <p>Pratique entrada/saída, condicionais, loops, vetores e funções</p>
+          <button class="card-btn">Acessar</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Católica SC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

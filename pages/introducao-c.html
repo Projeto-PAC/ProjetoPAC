@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução à Linguagem C</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>PAC</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <a href="../index.html" class="back-btn">← Voltar</a>
+
+      <article class="content-page">
+        <h2>Introdução à Linguagem C</h2>
+
+        <h3>O que é Linguagem C?</h3>
+
+        <p>
+          C é uma linguagem de programação poderosa e eficiente, criada por
+          Dennis Ritchie na década de 1970. Inicialmente foi desenvolvida para
+          criar o sistema operacional UNIX.
+        </p>
+
+        <h3>Características</h3>
+
+        <ul>
+          <li>
+            <strong>Rápida:</strong> Executa instruções rapidamente devido à sua
+            proximidade com linguagem de máquina
+          </li>
+          <li>
+            <strong>Flexível:</strong> Oferece controle fino sobre o hardware
+          </li>
+          <li>
+            <strong>Próxima da máquina:</strong> Permite manipulação de memória
+            direta
+          </li>
+          <li>
+            <strong>Base de muitas linguagens:</strong> Influenciou C++, C#,
+            Java, Python e outras
+          </li>
+          <li>
+            <strong>O "latim" das linguagens:</strong> Considerada fundamental
+            no aprendizado de programação
+          </li>
+        </ul>
+
+        <h3>Onde C é Usada</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Aplicação</th>
+              <th>Exemplos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sistemas Operacionais</strong></td>
+              <td>UNIX, Linux, Windows (parcialmente)</td>
+            </tr>
+            <tr>
+              <td><strong>Drivers e Jogos</strong></td>
+              <td>Drivers de hardware, engines de jogos</td>
+            </tr>
+            <tr>
+              <td><strong>Software Embarcado</strong></td>
+              <td>Microcontroladores, sistemas IoT</td>
+            </tr>
+            <tr>
+              <td><strong>Aplicações de Alto Desempenho</strong></td>
+              <td>Processamento de imagem, simulações</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Estrutura Básica de um Programa em C</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Elemento</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>#include &lt;stdio.h&gt;</strong></td>
+              <td>
+                Biblioteca padrão de entrada e saída (Standard Input/Output). Dá
+                acesso às funções como printf()
+              </td>
+            </tr>
+            <tr>
+              <td><strong>#include &lt;stdlib.h&gt;</strong></td>
+              <td>
+                Biblioteca padrão que oferece funções essenciais para tarefas
+                comuns em programação
+              </td>
+            </tr>
+            <tr>
+              <td><strong>int main()</strong></td>
+              <td>
+                Função principal, o ponto de partida de todo programa em C
+              </td>
+            </tr>
+            <tr>
+              <td><strong>printf("...");</strong></td>
+              <td>
+                Função que "imprime" (exibe) o texto na tela. Faz parte da
+                entrada e saída dos dados
+              </td>
+            </tr>
+            <tr>
+              <td><strong>scanf();</strong></td>
+              <td>
+                Função de entrada, usada para ler dados do teclado e
+                armazená-los em variáveis
+              </td>
+            </tr>
+            <tr>
+              <td><strong>return 0;</strong></td>
+              <td>
+                Indica ao sistema operacional que o programa terminou sua
+                execução com sucesso
+              </td>
+            </tr>
+            <tr>
+              <td><strong>//</strong></td>
+              <td>Comentários dentro do código</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Atividade 1 - Hello, World!</h3>
+
+        <p>
+          O "Hello, World!" é o primeiro programa criado por quem está
+          aprendendo a programar.
+        </p>
+
+        <h4>Objetivo</h4>
+        <ul>
+          <li>
+            Verificar se o ambiente de programação (compilador) está funcionando
+            corretamente
+          </li>
+          <li>Primeiro contato com a sintaxe da linguagem C</li>
+        </ul>
+
+        <h4>Passos</h4>
+        <ol>
+          <li>Abrir o aplicativo Dev-C++ no desktop ou um compilador online</li>
+          <li>
+            Criar um novo projeto e salvar com o nome "Aula01" na área de
+            trabalho
+          </li>
+          <li>Testar clicando em Executar ou na tecla F11</li>
+        </ol>
+
+        <div class="activity-box">
+          <h4>💻 Código 1 — Olá Mundo</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void) {
+    printf("Olá, mundo!\n");
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Atividade 2 – Qual é o seu Nome?</h3>
+
+        <h4>Objetivo</h4>
+        <ul>
+          <li>Modificar o código do "Hello, World!"</li>
+          <li>Exibir o seu nome e uma saudação</li>
+          <li>Exemplo: "Olá, [Seu Nome]!"</li>
+        </ul>
+
+        <div class="activity-box">
+          <h4>💻 Código 2 — Qual é o seu nome?</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void) {
+    // variável (exemplo didático)
+    int nome;
+
+    // entrada
+    printf("Qual o seu nome? ");
+    scanf("%i", &nome);
+
+    // saída
+    printf("Olá, %i!", nome);
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Próximos Passos</h3>
+
+        <div class="activity-box">
+          <h4>🧠 Pratique!</h4>
+          <p>
+            Certifique-se de compilar e executar os códigos apresentados. Faça
+            pequenas modificações para entender melhor como a linguagem
+            funciona.
+          </p>
+
+          <h4 style="margin-top: 1.5rem">📋 Avisos Importantes</h4>
+          <p>
+            <strong>Próximas aulas:</strong> 21 e 28 de novembro, a partir das
+            18h45.
+          </p>
+          <p>
+            <strong>Próximo tópico:</strong> Variáveis, tipos de dados e
+            operadores!
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Católica SC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

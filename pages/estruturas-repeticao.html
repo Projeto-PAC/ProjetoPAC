@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estruturas de Repetição</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>PAC</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <a href="../index.html" class="back-btn">← Voltar</a>
+
+      <article class="content-page">
+        <h2>Estruturas de Repetição e Decisão</h2>
+
+        <h3>Parte 1: Estruturas de Decisão (if, else if, else)</h3>
+
+        <p>
+          Programas precisam tomar decisões. As estruturas
+          <code>if</code> (se), <code>else if</code> (senão se) e
+          <code>else</code> (senão) permitem que seu código execute diferentes
+          blocos de instruções dependendo de uma condição ser verdadeira ou
+          falsa.
+        </p>
+
+        <p>
+          <strong>Analogia:</strong> É como um GPS que decide qual caminho
+          seguir com base nas condições do trânsito.
+        </p>
+
+        <h4>Operadores de Comparação</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Significado</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>==</code></td>
+              <td>Igual a</td>
+              <td>idade == 18</td>
+            </tr>
+            <tr>
+              <td><code>!=</code></td>
+              <td>Diferente de</td>
+              <td>idade != 18</td>
+            </tr>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td>Maior que</td>
+              <td>idade &gt; 18</td>
+            </tr>
+            <tr>
+              <td><code>&lt;</code></td>
+              <td>Menor que</td>
+              <td>idade &lt; 18</td>
+            </tr>
+            <tr>
+              <td><code>&gt;=</code></td>
+              <td>Maior ou igual a</td>
+              <td>idade &gt;= 18</td>
+            </tr>
+            <tr>
+              <td><code>&lt;=</code></td>
+              <td>Menor ou igual a</td>
+              <td>idade &lt;= 18</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-separator"></div>
+
+        <h3>Exemplo Comentado: Verificar Maioridade</h3>
+
+        <div class="activity-box">
+          <h4>💻 Código - Estrutura if/else</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    if (idade &gt;= 18) {
+        printf("Você é maior de idade.\n");
+    } else {
+        printf("Você é menor de idade.\n");
+    }
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h4>Explicação</h4>
+        <ul>
+          <li>
+            <code>if (idade &gt;= 18)</code> — Testa se a idade é maior ou igual
+            a 18
+          </li>
+          <li>
+            Se a condição for <strong>verdadeira</strong>, executa o bloco
+            dentro do <code>if</code>
+          </li>
+          <li>
+            Se a condição for <strong>falsa</strong>, executa o bloco dentro do
+            <code>else</code>
+          </li>
+        </ul>
+
+        <div class="section-separator"></div>
+
+        <h3>Parte 2: Estruturas de Repetição (for, while)</h3>
+
+        <p>
+          Para tarefas repetitivas, como contar até 10 ou processar uma lista de
+          itens, usamos <strong>laços de repetição (loops)</strong>. Eles nos
+          poupam de escrever o mesmo código várias vezes.
+        </p>
+
+        <h4>Laço for</h4>
+
+        <p>
+          <strong>Uso ideal:</strong> Quando você sabe quantas vezes a repetição
+          precisa acontecer.
+        </p>
+
+        <p><strong>Sintaxe:</strong></p>
+        <pre
+          class="code-block"
+        ><code>for (inicialização; condição; incremento) {
+    // bloco de código
+}
+</code></pre>
+
+        <div class="activity-box">
+          <h4>💻 Código 1 — Contando de 1 a 5 com for</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Contando de 1 a 5:\n");
+
+    for (int i = 1; i &lt;= 5; i++) {
+        // i começa em 1, vai até 5, incrementando 1 a cada vez
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+</code></pre>
+          <h5>Explicação</h5>
+          <ul>
+            <li><code>int i = 1</code> — Inicialização: i começa em 1</li>
+            <li>
+              <code>i &lt;= 5</code> — Condição: continua enquanto i for menor
+              ou igual a 5
+            </li>
+            <li><code>i++</code> — Incremento: adiciona 1 a i a cada volta</li>
+          </ul>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h4>Laço while</h4>
+
+        <p>
+          <strong>Uso ideal:</strong> Quando você quer que a repetição continue
+          enquanto uma condição for verdadeira. O número de repetições pode ser
+          desconhecido no início.
+        </p>
+
+        <p><strong>Sintaxe:</strong></p>
+        <pre class="code-block"><code>while (condição) {
+    // bloco de código
+}
+</code></pre>
+
+        <div class="activity-box">
+          <h4>💻 Código 2 — Contando com while</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int contador = 0;
+
+    while (contador &lt; 3) {
+        // Enquanto contador for menor que 3
+        printf("Repetição %d\n", contador + 1);
+        contador++;  // Incrementa para evitar loop infinito
+    }
+
+    return 0;
+}
+</code></pre>
+          <h5>Explicação</h5>
+          <ul>
+            <li><code>int contador = 0</code> — Inicializa o contador</li>
+            <li>
+              <code>while (contador &lt; 3)</code> — Testa a condição antes de
+              executar
+            </li>
+            <li>
+              <code>contador++</code> — Incrementa para evitar um loop infinito
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Parte 3: Estruturas de Repetição (do-while)</h3>
+
+        <p>
+          À primeira vista, <code>while</code> e <code>do-while</code> parecem
+          exercer a mesma função, mas existe uma diferença sutil.
+        </p>
+
+        <h4>Diferença Principal</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th>while</th>
+              <th>do-while</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Testa a condição <strong>antes</strong> de executar</td>
+              <td>Testa a condição <strong>depois</strong> de executar</td>
+            </tr>
+            <tr>
+              <td>Pode nunca executar se a condição começar falsa</td>
+              <td>Sempre executa pelo menos uma vez</td>
+            </tr>
+            <tr>
+              <td>Use quando talvez não precise executar nenhuma vez</td>
+              <td>Use quando quer garantir pelo menos uma execução</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="activity-box">
+          <h4>💻 Código - Comparação: while vs do-while</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int numero = 10;
+
+    printf("Usando while:\n");
+    while (numero &lt; 5) {
+        printf("Dentro do while\n");
+    }
+
+    printf("\nUsando do-while:\n");
+    do {
+        printf("Dentro do do-while (executado uma vez)\n");
+    } while (numero &lt; 5);
+
+    return 0;
+}
+</code></pre>
+          <h5>Resultado</h5>
+          <p
+            style="
+              font-family: monospace;
+              background-color: var(--light-bg);
+              padding: 1rem;
+              border-left: 4px solid var(--accent-color);
+              border-radius: 4px;
+            "
+          >
+            Usando while:<br />
+            (nada é impresso)<br />
+            <br />
+            Usando do-while:<br />
+            Dentro do do-while (executado uma vez)
+          </p>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Exemplos Práticos com Loops</h3>
+
+        <div class="activity-box">
+          <h4>💻 Código 3 — Contagem de 1 a 10</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="activity-box">
+          <h4>💻 Código 4 — Tabuada</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i &lt;= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="activity-box">
+          <h4>💻 Código 5 — Média de 5 Notas</h4>
+          <pre class="code-block"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float nota, soma = 0;
+    int i;
+
+    for (i = 1; i &lt;= 5; i++) {
+        printf("Digite a nota %d: ", i);
+        scanf("%f", &nota);
+        soma += nota;  /* soma += nota é equivalente a soma = soma + nota */
+    }
+
+    printf("Media: %.2f\n", soma / 5);
+
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Lista de Exercícios</h3>
+
+        <div class="activity-box">
+          <h4>Exercício 1</h4>
+          <p>Leia um número n e calcule a soma dos números de 1 até n.</p>
+          <p>
+            <strong>Dica:</strong> Use um loop for e uma variável para acumular
+            a soma.
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Exercício 2</h4>
+          <p>Mostre todos os números pares entre 1 e 50.</p>
+          <p>
+            <strong>Dica:</strong> Use um loop for e o operador % para verificar
+            se é par.
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Exercício 3</h4>
+          <p>Mostrar os 10 primeiros números pares.</p>
+          <p><strong>Dica:</strong> Comece de 2 e incremente de 2 em 2.</p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Exercício 4</h4>
+          <p>Mostre os números de 10 até 1 usando while.</p>
+          <p><strong>Dica:</strong> Comece com 10 e decremente até 1.</p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Exercício 5</h4>
+          <p>Ler números até o usuário digitar um número negativo.</p>
+          <p>
+            <strong>Dica:</strong> Use um loop while com condição verificando se
+            o número é positivo.
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h4>Exercício 6</h4>
+          <p>Ler uma senha até o usuário acertar (a senha correta é "1234").</p>
+          <p>
+            <strong>Dica:</strong> Use um loop do-while para garantir que pede
+            pelo menos uma vez.
+          </p>
+        </div>
+
+        <div class="section-separator"></div>
+
+        <h3>Resumo Geral</h3>
+
+        <div class="activity-box">
+          <h4>Checklist de Aprendizado</h4>
+          <ul>
+            <li>✓ Compreendo estruturas if, else if e else</li>
+            <li>✓ Conheço todos os operadores de comparação</li>
+            <li>
+              ✓ Estruturas de repetição economizam escrita e tornam o programa
+              dinâmico
+            </li>
+            <li>
+              ✓ Laço for é usado quando sei quantas vezes quer repetir algo
+            </li>
+            <li>
+              ✓ Laço for possui três partes: inicialização, condição, incremento
+            </li>
+            <li>
+              ✓ Laço while executa enquanto condição for verdadeira e verifica
+              antes de entrar no bloco
+            </li>
+            <li>
+              ✓ Laço while pode nunca executar se a condição começar falsa
+            </li>
+            <li>
+              ✓ Laço do-while executa pelo menos uma vez, pois testa a condição
+              depois da execução
+            </li>
+            <li>
+              ✓ do-while é ideal quando quero garantir ao menos uma execução
+            </li>
+          </ul>
+        </div>
+
+        <div class="activity-box">
+          <h4>📋 Próximas Aulas</h4>
+          <p><strong>Datas:</strong> 21 e 28 de novembro, a partir das 18h45</p>
+          <p>
+            <strong>Tópicos:</strong> Funções e modularização de código. Aprenda
+            a criar funções reutilizáveis para organizar melhor seus programas!
+          </p>
+        </div>
+
+        <div
+          class="activity-box"
+          style="background-color: #e3f2fd; border-color: #2196f3"
+        >
+          <h4>💡 Dica Final</h4>
+          <p>
+            Pratique com os exercícios! Tente combinar diferentes estruturas de
+            decisão e repetição para resolver problemas do dia a dia. A prática
+            é o caminho para dominar programação.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Católica SC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
